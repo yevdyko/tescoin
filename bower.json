@@ -1,0 +1,28 @@
+{
+  "name": "bitcoin_shopper",
+  "homepage": "https://github.com/youngmanr/bitcoin_shopper",
+  "authors": [
+    "danwheeler <da-wheeler@hotmail.co.uk>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.6",
+    "angular": "~1.4.8",
+    "angular-resource": "~1.4.8"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.4.8",
+    "angular-route": "~1.4.8"
+  }
+}
