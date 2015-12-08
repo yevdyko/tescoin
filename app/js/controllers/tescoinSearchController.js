@@ -1,11 +1,11 @@
 "use strict";
 
-tescoinSearch.controller("TescoinSearchController", [function() {
+tescoinSearch.controller('TescoinSearchController', [function() {
 	var self = this;
 
 	    self.doSearch = function() {
-	    	self.searchResults = {
-					"items"[
+	    	self.searchResult = {
+					"items":[
 			      {
 			        "ImagePath": "http://img.tesco.com/Groceries/pi/642/5053526772642/IDShot_90x90.jpg",
 			        "Name": "Tesco Everyday Value Sponge Pan Cleaners 8 Pack",
