@@ -7,10 +7,10 @@ describe('TescoinSearchController', function() {
     ctrl = $controller('TescoinSearchController');
   }));
 
-  it( 'initialises with an empty search result and term', function() {
+  it( 'initialises with an empty search result, session key and search term', function() {
     expect(ctrl.searchResult).toBeUndefined();
     expect(ctrl.searchTerm).toBeUndefined();
-    expect(ctrl.sessionkey).toBeUndefined();
+    expect(ctrl.sessionKey).toBeUndefined();
   });
 
   describe('when searching for a product', function() {
@@ -45,7 +45,7 @@ describe('TescoinSearchController', function() {
 
     it('displays search results', function() {
       ctrl.sessionkey = 'sessionKey';
-      ctrl.searchTerm = 'product';
+      ctrl.searchTerm = 'products';
       ctrl.doSearch();
       httpBackend.flush();
       expect(ctrl.searchResult.items).toEqual(items);

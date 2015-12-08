@@ -4,15 +4,15 @@ tescoinSearch.controller('TescoinSearchController', ['Search', function(Search) 
 	var self = this;
 
 	    self.doSearch = function() {
-	    	Search.query(self.urlString)
+	    	Search.query(self.sessionKey, self.searchTerm)
       		.then(function(response) {
         		self.searchResult = response.data;
-      })
+        })
 	    };
 
-	    self.createUrlString = function() {
-				self.urlString = "https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&searchtext=" + self.searchTerm + "&page=1&sessionkey=" + self.sessionkey;
-	    };
+	   //  self.createUrlString = function() {
+				// self.urlString = "https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&searchtext=" + self.searchTerm + "&page=1&sessionkey=" + self.sessionkey;
+	   //  };
 }]);
 
 
