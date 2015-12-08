@@ -6,5 +6,5 @@ describe('TescoinSearchController', function() {
 	beforeEach(inject(function($controller) {
 		ctrl = $controller('TescoinSearchController');
 	}));
-	
+
 });
