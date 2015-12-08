@@ -13,6 +13,11 @@ describe('TescoinSearchController', function() {
   });
 
   describe('when searching for a product', function() {
+    afterEach(function() {
+      httpBackend.verifyNoOutstandingExpectation();
+      httpBackend.verifyNoOutstandingRequest();
+     });
+
 
     var httpBackend;
     beforeEach(inject(function($httpBackend) {
