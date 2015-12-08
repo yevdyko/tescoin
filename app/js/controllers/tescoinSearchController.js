@@ -1,22 +1,17 @@
 "use strict";
 
-tescoinSearch.controller('TescoinSearchController', [function() {
+tescoinSearch.controller('TescoinSearchController', ['$resource', function($resource) {
 	var self = this;
+	var searchResource = $resource('https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&searchtext=myproduct&page=1&sessionkey=');
 
 	    self.doSearch = function() {
-	    	self.searchResult = {
-					"items":[
-			      {
-			        "ImagePath": "http://img.tesco.com/Groceries/pi/642/5053526772642/IDShot_90x90.jpg",
-			        "Name": "Tesco Everyday Value Sponge Pan Cleaners 8 Pack",
-			        "Price": 0.4
-			      },
-			      {
-			        "ImagePath": "http://img.tesco.com/Groceries/pi/467/5000436616467/IDShot_540x540.jpg",
-			        "Name": "Tesco Everyday Cornflakes",
-			        "Price": 2.0
-			      }
-				  ]
-				};
+	    	self.searchResult = searchResource.get(
+				  { q: self.searchTerm }
+				);
 	    };
 }]);
+
+
+// https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=LOGIN&email=ruralmyth@gmail.com&password=m00m1NS??&developerkey=MYrigdksfRpGy2DdaXQe&applicationkey=67F37A4AB79CF4D72BBB
+
+// https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&searchtext=myproduct&page=1&sessionkey=
