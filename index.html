@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="TescoinSearch>
 <head>
   <meta charset="UTF-8">
   <title>Tescoin</title>
@@ -10,10 +10,10 @@
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
-  <script src="app/app.js"></script>
-  <script src="js/tescoinController.js"></script>
+  <script src="app/js/app.js"></script>
+  <script src="app/js/controllers/tescoinSearchController.js"></script>
 </head>
-<body>
+<body  ng-controller="TescoinSearchController as searchCtrl>
   <div class="tesc-header">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">
