@@ -10,6 +10,7 @@ describe('TescoinSearchController', function() {
   it( 'initialises with an empty search result and term', function() {
     expect(ctrl.searchResult).toBeUndefined();
     expect(ctrl.searchTerm).toBeUndefined();
+    expect(ctrl.sessionkey).toBeUndefined();
   });
 
   describe('when searching for a product', function() {
@@ -23,7 +24,7 @@ describe('TescoinSearchController', function() {
     beforeEach(inject(function($httpBackend) {
       httpBackend = $httpBackend
       httpBackend
-        .when("GET", "https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&searchtext=myproduct&page=1&sessionkey=&q=product")
+        .when("GET", "https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&searchtext=product&page=1&sessionkey=sessionKey")
         .respond(
           {items: items}
         );
@@ -43,6 +44,7 @@ describe('TescoinSearchController', function() {
     ];
 
     it('displays search results', function() {
+      ctrl.sessionkey = 'sessionKey';
       ctrl.searchTerm = 'product';
       ctrl.doSearch();
       httpBackend.flush();

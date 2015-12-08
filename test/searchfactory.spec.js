@@ -1,7 +1,23 @@
 describe('factory: Search', function() {
 
   var search;
-  var items = [
+
+  beforeEach(module('TescoinSearch'));
+
+  beforeEach(inject(function(Search) {
+    search = Search;
+  }));
+
+  beforeEach(inject(function($httpBackend) {
+    httpBackend = $httpBackend
+    httpBackend
+      .when("GET", "https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&searchtext=product&page=1&sessionkey=sessionKey")
+      .respond(
+        { items: items }
+      );
+  }));
+
+    var items = [
       {
         "ImagePath": "http://img.tesco.com/Groceries/pi/642/5053526772642/IDShot_90x90.jpg",
         "Name": "Tesco Everyday Value Sponge Pan Cleaners 8 Pack",
@@ -14,31 +30,23 @@ describe('factory: Search', function() {
       }
     ];
 
-  beforeEach(module('TescoinSearch'));
-
-  beforeEach(inject(function(Search) {
-    search = Search;
-  }));
-
-  beforeEach(inject(function($httpBackend) {
-    httpBackend = $httpBackend
-    httpBackend
-      .when("GET", "https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&searchtext=myproduct&page=1&sessionkey=&q=product")
-      .respond(
-        { items: items }
-      );
-  }));
-
   it('responds to query', function() {
     expect(search.query).toBeDefined();
   });
 
   it('returns search results', function() {
-  search.query('product')
+  search.query("https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&searchtext=product&page=1&sessionkey=sessionKey") 
     .then(function(response) {
       expect(response.data.items).toEqual(items)
     })
-  httpBackend.flush();
-})
+     httpBackend.flush();
+  })
 
 });
+
+
+
+
+
+
+

@@ -1,14 +1,18 @@
 tescoinSearch.factory('Search', ['$http', function($http) {
-  var queryUrl = 'https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&searchtext=myproduct&page=1&sessionkey=';
+
+  // var queryUrl = 'https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&';
   return {
-    query: function(searchTerm) {
+    query: function(urlString) {
       return $http({
-        url: queryUrl,
+        url: urlString,
         method: 'GET',
-        params: {
-          'q': searchTerm
-        }
+  
       });
     }
   }
 }]);
+
+
+
+
+      
