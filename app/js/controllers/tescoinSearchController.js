@@ -1,18 +1,28 @@
 "use strict";
 
-tescoinSearch.controller('TescoinSearchController', ['Search', function(Search) {
+tescoinSearch.controller('TescoinSearchController', ["Search", function(Search) {
 	var self = this;
+  self.activeTab = 1;
 
 	    self.doSearch = function() {
-	    	Search.query(self.urlString)
+	    	var urlString = self.createUrlString();
+        Search.query(urlString)
       		.then(function(response) {
         		self.searchResult = response.data;
-      })
+        })
 	    };
 
 	    self.createUrlString = function() {
-				self.urlString = "https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&searchtext=" + self.searchTerm + "&page=1&sessionkey=" + self.sessionkey;
+				return "https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&searchtext=" + self.searchTerm + "&page=1&sessionkey=" + self.sessionkey;
 	    };
+
+      self.setTab = function(number) {
+        self.activeTab = number;
+      };
+
+      self.isActiveTab = function(number) {
+        return (self.activeTab === number);
+      };
 }]);
 
 
