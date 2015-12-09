@@ -71,6 +71,14 @@ p {
   font-style: normal;
 }
 
+.item-price {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  vertical-align: middle;
+  font-style: normal;
+}
+
 .row-1 {
   width: 300px;
   height: 140px;
