@@ -35,7 +35,8 @@ describe('factory: Search', function() {
   });
 
   it('returns search results', function() {
-    search.query('123456789', 'products') 
+    console.log('before the test');
+    search.query('https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&searchtext=products&page=1&sessionkey=123456789') 
     .then(function(response) {
       expect(response.data.items).toEqual(items)
     })
