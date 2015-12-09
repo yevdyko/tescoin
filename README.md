@@ -15,18 +15,26 @@ Deployment on local browser
 =====================================================
 
 * Install Node/NPM (https://nodejs.org/en/download/)
+
 ``` git clone https://github.com/forty9er/tescoin tescoin ```
+
 ``` git pull origin master ```
+
 ``` npm install ```
+
 ``` bower install ```
+
 ``` open index.html ``` (or ``` node tescoin.js ``` to start on Express server)
 
 Deploying to Heroku
 ===================
 
 ``` heroku create <your app name> ```
+
 ``` git push heroku master ```
+
 ``` heroku open ```
+
 
 Instruction for using Tescoin website
 =====================================
@@ -36,10 +44,11 @@ Instruction for using Tescoin website
   * have a Tesco grocery account
 * Link to developer registration is: 
   * https://secure.techfortesco.com/tescoapiweb/login.aspx
-* Details of how to use the Tesco Labs API are given here:
-  * https://secure.techfortesco.com/tescoapiweb/wiki/intro.html
 * The Tesco API requires the user to obtain a Tesco API session key. You need to login to the Tesco Labs website before you can use Tescoin. Follow the example on the Tesco login WIKI:
   * https://secure.techfortesco.com/tescoapiweb/wiki/login.html
+* Details of how to use the Tesco Labs API are given here:
+  * https://secure.techfortesco.com/tescoapiweb/wiki/intro.html
+
 
 Screen shots
 ============
