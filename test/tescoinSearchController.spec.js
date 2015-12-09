@@ -58,4 +58,15 @@ describe('TescoinSearchController', function() {
       expect(ctrl.searchResult.items).toEqual(items);
     });
   });
+
+  describe("setting up the tab", function() {
+    it("changes the active tab", function() {
+      ctrl.setTab(2);
+      expect(ctrl.activeTab).toEqual(2);
+    });
+  });
 });
+
+
+
+
