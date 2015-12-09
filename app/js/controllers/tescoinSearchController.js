@@ -25,15 +25,15 @@ tescoinSearch.controller('TescoinSearchController', ['$http', '$resource', funct
         });
       };
 
-      // self.convertPrice(poundPr) = function {
-      //   product 
-      // };
+      self.convertPrice = function(poundPr) {
+        return (poundPr / self.bitcoinRate).toFixed(5); 
+      };
 
       self.getInfo = function() {
        var products =  self.searchResult.Products;
         for (var i = 0; i < products.length; i++) {
           var item = {};
-          item.price = products[i].Price;
+          item.price = self.convertPrice(products[i].Price);
           item.pname = products[i].Name;
           item.img = products[i].ImagePath;
           self.searchedProducts.push(item);
