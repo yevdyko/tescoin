@@ -6,7 +6,7 @@ To develop a website which enable users to search the Tesco on-line shopping cat
 User Stories
 ============
 
-![User Stories](docs/photos/1_user_stories)
+![User Stories](docs/photos/1_user_stories.png)
 
 Link to user stories
 * https://docs.google.com/spreadsheets/d/1Q6hG9aBY7lSwlUnbUx1afprLKVxiOUhd8JSAa1beGms/edit#gid=0&vpid=A1
@@ -41,6 +41,6 @@ Instruction for using tescoin website
 Screen shots
 ============
 ![User Stories](docs/photos/2_beer.png)
-![User Stories](docs/photos/3_wine.png)
-![User Stories](docs/photos/4_sprouts.png)
+![User Stories](docs/photos/3_sprouts.png)
+![User Stories](docs/photos/4_wine.png)
 
