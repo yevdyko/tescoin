@@ -1,9 +1,11 @@
-.tesc-header {
+nav {
   padding-left: 45px;
   padding-top: 12.5px;
   height: 75px;
   background-color: #FFF;
   vertical-align: middle;
+  position: fixed;
+  top: 0px;
 }
 
 .logo {

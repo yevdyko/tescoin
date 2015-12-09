@@ -15,7 +15,7 @@
   <script src="app/js/controllers/tescoinSearchController.js"></script>
 </head>
 <body  ng-controller="TescoinSearchController as searchCtrl">
-  <div class="tesc-header">
+  <nav class="navbar navbar-default navbar-fixed-top">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">
         <p class="logo">TESCOIN</p>
@@ -37,7 +37,7 @@
         <button type="submit" ng-click="searchCtrl.doSearch()" class="btn btn-default">Search</button>
       </form>
     </div>
-  </div>
+  </nav>
 
   <div class="search-results" ng-show="searchCtrl.isActiveTab(2)">Number of products: {{ searchCtrl.searchedProducts.length }}</div>
   <div class="product-background" ng-repeat="product in searchCtrl.searchedProducts">
