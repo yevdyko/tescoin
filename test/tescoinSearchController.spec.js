@@ -13,6 +13,20 @@ describe('TescoinSearchController', function() {
     expect(ctrl.sessionKey).toBeUndefined();
   });
 
+  describe('setTab', function() {
+    it('sets the active tab to the input number', function() {
+      ctrl.setTab(2);
+      expect(ctrl.activeTab).toEqual(2);
+    });
+  });
+
+
+  describe('isActiveTab', function() {
+    it('checks what activeTab is', function() {
+      expect(ctrl.isActiveTab(1)).toBeTruthy();
+    });
+  });
+
   describe('#createUrlString', function() {
     var searchTerm = 'products';
     var sessionKey = 123456789 ;
