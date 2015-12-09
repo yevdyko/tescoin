@@ -1,16 +1,12 @@
-tescoinSearch.factory('Search', ['$resource', function($resource) {
+tescoinSearch.factory('Search', ['$http', function($http) {
 
-  var queryUrl = 'https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&searchtext=:searchTerm&page=1&sessionkey=:sessionKey';
+  // var queryUrl = 'https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&searchtext=myproduct&page=1&sessionkey=';
   return {
-    query: function(sessionKey, searchTerm) {
-      return $resource({
+    query: function(queryUrl) {
+      return $http.jsonp({
         url: queryUrl,
-        method: 'GET',
-        params: {
-         'searchTerm': searchTerm, 
-         'sessionKey': sessionKey
-        }  
+        method: 'GET'
       });
     }
   }
-}]);
+}]); 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="TescoinSearch>
+<html lang="en" ng-app="TescoinSearch">
 <head>
   <meta charset="UTF-8">
   <title>Tescoin</title>
@@ -12,42 +12,47 @@
   <script src="bower_components/angular-resource/angular-resource.js"></script>
   <script src="app/js/app.js"></script>
   <script src="app/js/controllers/tescoinSearchController.js"></script>
+  <script src="app/js/searchFactory.js"></script>
 </head>
-<body  ng-controller="TescoinSearchController as searchCtrl>
+<body  ng-controller="TescoinSearchController as searchCtrl">
   <div class="tesc-header">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">
         <p class="logo">TESCOIN</p>
       </a>
     </div>
-    <form class="navbar-form navbar-left" role="search">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Enter session number">
-      </div>
-    <button type="submit" class="btn btn-default">Submit</button>
-    </form>
-    <form class="navbar-form navbar-left" role="search">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search">
-      </div>
-    <button type="submit" class="btn btn-default">Search</button>
-    </form>
+    <div id="sessionScreen">
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          
+        </div>
+        <button type="submit" ng-click="searchCtrl.setTab(2)" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+    <div id="searchScreen">
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" name='mySession' class="form-control" ng-model="searchCtrl.sessionKey" placeholder="Enter session number">
+          <input type="text" name="mySearchTerm" class="form-control" ng-model="searchCtrl.searchTerm" placeholder="Search">
+        </div>
+        <button type="submit" ng-click="searchCtrl.doSearch()" class="btn btn-default">Search</button>
+      </form>
+    </div>
   </div>
-<div class="stripe">
-<div class="row">
-</div>
-<div class="row">
-  <div class="col-md-3"></div>
-  <div class="col-md-2">
-    <img src=http://img.tesco.com/Groceries/pi/108/0000050354108/IDShot_110x110.jpg alt="Picture"></div>
-  <div class="col-md-2">
-    <i class="fa fa-btc">0.00565</i>
+  <div class="product-background">
+    <div class="product-container">
+      <div class="image">
+        <img src="http://img.tesco.com/Groceries/pi/108/0000050354108/IDShot_540x540.jpg" alt="Picture">
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <i class="fa fa-btc">0.00565</i>
+        </div>
+        <div class="col-md-9">
+          <p>Hartleys Best Raspberry Jam 340G</p>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="col-md-2">Hartleys Best Raspberry Jam 340G</div>
-  <div class="col-md-3"></div>
-</div>
-<div class="row">
-</div>
-</div>
 </body>
 </html>
