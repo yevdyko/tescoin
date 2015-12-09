@@ -55,7 +55,7 @@
 
 i {
   font-family: "Roboto", sans-serif;
-  font-size: 30px;
+  font-size: 50px;
   font-weight: bold;
   vertical-align: middle;
   font-style: normal;
@@ -99,7 +99,7 @@ footer {
   bottom: 0px;
 }
 
-/*img {
+.img-small {
   width: auto;
   height: 250px;
-}*/
+}
