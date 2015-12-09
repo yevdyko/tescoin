@@ -15,18 +15,18 @@ Deployment on local browser
 =====================================================
 
 * Install Node/NPM (https://nodejs.org/en/download/)
-```git clone https://github.com/forty9er/tescoin tescoin```
-```git pull origin master```
-```npm install```
-```bower install```
-```open index.html``` (or ```node tescoin.js``` to start on Express server)
+``` git clone https://github.com/forty9er/tescoin tescoin ```
+``` git pull origin master ```
+``` npm install ```
+``` bower install ```
+``` open index.html ``` (or ``` node tescoin.js ``` to start on Express server)
 
 Deploying to Heroku
 ===================
 
-```heroku create <your app name>```
-```git push heroku master```
-```heroku open```
+``` heroku create <your app name> ```
+``` git push heroku master ```
+``` heroku open ```
 
 Instruction for using Tescoin website
 =====================================
