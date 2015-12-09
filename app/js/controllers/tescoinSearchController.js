@@ -29,21 +29,26 @@ tescoinSearch.controller('TescoinSearchController', ['$http', '$resource', funct
         return (poundPr / self.bitcoinRate).toFixed(5); 
       };
 
+      self.convertImage = function(imgString) {
+        return (imgString.replace("90x90", "540x540"));
+      };
+
       self.getInfo = function() {
        var products =  self.searchResult.Products;
         for (var i = 0; i < products.length; i++) {
           var item = {};
           item.price = self.convertPrice(products[i].Price);
-          item.pname = products[i].Name;
-          item.img = products[i].ImagePath;
+          item.pName = products[i].Name;
+          item.img = self.convertImage(products[i].ImagePath);
+          item.unitPrice = self.convertPrice(products[i].UnitPrice);
+          item.unitType = products[i].UnitType;
           self.searchedProducts.push(item);
         }
         console.log(self.searchedProducts);
       };
 
-
-
 	    self.doSearch = function() {
+        self.clearSearchResults();
         $http.jsonp(self.createUrlString())
               .success(function(data){
                 self.searchResult = data;
@@ -51,12 +56,11 @@ tescoinSearch.controller('TescoinSearchController', ['$http', '$resource', funct
               });
 
         self.getBitcoinRate();
-  
-	    	// Search.query(self.createUrlString())
-      // 		.then(function(response) {
-      //   		self.searchResult = response.data;
-      //   })
 	    };
+
+      self.clearSearchResults = function() {
+        self.searchedProducts = [];
+      };
 
 	    self.createUrlString = function() {
 				// console.log("URL: https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&searchtext=".concat(self.searchTerm).concat("&page=1&sessionkey=").concat(self.sessionKey));
