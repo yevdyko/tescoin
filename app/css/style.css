@@ -1,5 +1,15 @@
+.tesc-header {
+  padding-left: 45px;
+  padding-top: 12.5px;
+  height: 75px;
+  background-color: #FFF;
+  vertical-align: middle;
+}
+
 .logo {
-  font-family: "Newtext";
+  font-family: "Verdana";
+  font-size: 22px;
+  font-weight: bold;
   src: url(/fonts/newtext_bold.ttf);
   color: #FE0016;
 }
@@ -7,49 +17,73 @@
 .product-background {
   background-color: #0042EF;
   width: 100%;
-  height: 450px;
+  height: 425px;
 }
 
 .product-container {
-  background-color: #000;
-  width: 60%;
-  margin-top: 50px;
-  margin: auto;
-  position: relative;
-}
-
-.product-info {
-  background-color: #FFF;
+  background-color: red;
   position: absolute;
-  height: 80px;
+  vertical-align: middle;
+  height: 325px;
+  width: 550px;
+  margin-left: 500px;
+  margin-top: 60px;
 }
 
 .col-md-3  {
-  background-color: #FFF;
-  border-right: 1px solid black;
-  height: 50px;
+  height: 110px;
+  width: 150px;
+  background-color: yellow;
+  position: relative;
+  margin-top: 15px;
+  vertical-align: middle;
 }
 
-.row {
-  max-width: 60%;
-  padding-right: 10px;
-  height: 150px;
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
-}
 .col-md-9 {
-  max-width: 60%;
-  background-color: #FFF;
-  height: 50px;
+  height: 110px;
+  width: 150px;
+  background-color: yellow;
+  border-left: 1px solid #000;
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
-.tesc-header {
-  height: 80px;
-  background-color: #FFF;
+i {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  vertical-align: middle;
+  font-style: normal;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  vertical-align: middle;
+  font-style: normal;
+}
+
+.row-1 {
+  width: 300px;
+  height: 140px;
+  background-color: yellow;
+  position: absolute;
+  margin-left: 750px;
+  margin-top: 245px;
+}
+
+.image-box {
+  width: 250px;
+  height: 250px;
+  background-color: red;
+  position: absolute;
+  margin-left: 510px;
+  margin-top: 95px;
 }
 
 img {
   width: auto;
-  height: 300px;
+  height: 250px;
 }

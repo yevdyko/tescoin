@@ -6,14 +6,13 @@
   <link rel="stylesheet" type="text/css" href="app/fonts/newtext_bold.ttf">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="app/css/style.css">
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.
-  css">
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
   <script src="app/js/app.js"></script>
   <script src="app/js/controllers/tescoinSearchController.js"></script>
+  <script src="app/js/searchFactory.js"></script>
 </head>
 <body  ng-controller="TescoinSearchController as searchCtrl">
   <div class="tesc-header">
@@ -22,33 +21,37 @@
         <p class="logo">TESCOIN</p>
       </a>
     </div>
-    <div id="sessionScreen" ng-show="searchCtrl.isActiveTab(1)">
+    <div id="sessionScreen">
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          
+        </div>
+        <button type="submit" ng-click="searchCtrl.setTab(2)" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+    <div id="searchScreen">
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" name='mySession' class="form-control" ng-model="searchCtrl.sessionKey" placeholder="Enter session number">
-        </div>
-      </form>
-    </div>
-    <div id="searchScreen" ng-show="searchCtrl.isActiveTab(2)">
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" ng-model="searchCtrl.searchTerm" class="form-control" placeholder="Search">
+          <input type="text" name="mySearchTerm" class="form-control" ng-model="searchCtrl.searchTerm" placeholder="Search">
         </div>
         <button type="submit" ng-click="searchCtrl.doSearch()" class="btn btn-default">Search</button>
       </form>
     </div>
   </div>
   <div class="product-background">
-    <div class="row-1">
-      <div class="col-md-3">
-        <i class="fa fa-btc">0.00565</i>
+    <div class="product-container">
+      <div class="image">
+        <img src="http://img.tesco.com/Groceries/pi/108/0000050354108/IDShot_540x540.jpg" alt="Picture">
       </div>
-      <div class="col-md-9">
-        <p>Hartleys Best Raspberry Jam 340G</p>
+      <div class="row">
+        <div class="col-md-3">
+          <i class="fa fa-btc">0.00565</i>
+        </div>
+        <div class="col-md-9">
+          <p>Hartleys Best Raspberry Jam 340G</p>
+        </div>
       </div>
-    </div>
-    <div class="image-box">
-      <img src="http://img.tesco.com/Groceries/pi/108/0000050354108/IDShot_540x540.jpg" alt="Picture">
     </div>
   </div>
 </body>
