@@ -1,7 +1,7 @@
 Objective of the Tescoin project
 ================================
 
-To develop a website which enable users to search the Tesco on-line shopping catelog and display the searched items priced in bitcoins using the real time exchange rate obtained from the bittylicious bitcoin exchange. 
+To develop a website which enable users to search the Tesco on-line shopping catalog and display the searched items priced in bitcoins using the real time exchange rate obtained from the bittylicious bitcoin exchange. 
 
 User Stories
 ============
@@ -15,6 +15,7 @@ Deployment on local browser
 =====================================================
 * git clone https://github.com/youngmanr/tescoin tescoin
 * git pull origin master
+* bower install
 * npm install
 * open index.html
 
