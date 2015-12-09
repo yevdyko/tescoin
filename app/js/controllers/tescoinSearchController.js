@@ -1,8 +1,10 @@
 "use strict";
 
-tescoinSearch.controller('TescoinSearchController', ['$http', function($http) {
+tescoinSearch.controller('TescoinSearchController', ['$http', '$resource', function($http, $resource) {
 	var self = this;
   self.activeTab = 1;
+  self.searchedProducts = [];
+  self.searchResource = $resource('https://bittylicious.com/api/v1/quote/BTC/GB/GBP/BANK/1/BUY');
 
       self.isActiveTab = function(num) {
         return (self.activeTab === num);
@@ -12,13 +14,44 @@ tescoinSearch.controller('TescoinSearchController', ['$http', function($http) {
         self.activeTab = num;
       };
 
+      self.getBittylicious = function() {
+              return self.searchResource.get();
+      };
+
+      self.getBitcoinRate =function() {
+        var bittyliciousObject = self.getBittylicious();
+        bittyliciousObject.$promise.then(function(data) {
+          self.bitcoinRate = data.totalPrice;
+        });
+      };
+
+      // self.convertPrice(poundPr) = function {
+      //   product 
+      // };
+
+      self.getInfo = function() {
+       var products =  self.searchResult.Products;
+        for (var i = 0; i < products.length; i++) {
+          var item = {};
+          item.price = products[i].Price;
+          item.pname = products[i].Name;
+          item.img = products[i].ImagePath;
+          self.searchedProducts.push(item);
+        }
+        console.log(self.searchedProducts);
+      };
+
+
+
 	    self.doSearch = function() {
         $http.jsonp(self.createUrlString())
               .success(function(data){
                 self.searchResult = data;
-                console.log(self.searchResult);
-                // console.log(data);
+                      self.getInfo();
               });
+
+        self.getBitcoinRate();
+  
 	    	// Search.query(self.createUrlString())
       // 		.then(function(response) {
       //   		self.searchResult = response.data;
