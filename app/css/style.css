@@ -79,6 +79,7 @@ p {
 }
 
 .image-box {
+  border-radius: 25px;
   width: 250px;
   height: 250px;
   background-color: red;
@@ -100,6 +101,7 @@ footer {
 }
 
 .img-small {
+  border-radius: 25px;
   width: auto;
   height: 250px;
 }
