@@ -2,11 +2,22 @@
 
 tescoinSearch.controller('TescoinSearchController', ['$http', function($http) {
 	var self = this;
+  self.activeTab = 1;
+
+      self.isActiveTab = function(num) {
+        return (self.activeTab === num);
+      };
+
+      self.setTab = function(num) {
+        self.activeTab = num;
+      };
 
 	    self.doSearch = function() {
         $http.jsonp(self.createUrlString())
               .success(function(data){
-                console.log(data);
+                self.searchResult = data;
+                console.log(self.searchResult);
+                // console.log(data);
               });
 	    	// Search.query(self.createUrlString())
       // 		.then(function(response) {

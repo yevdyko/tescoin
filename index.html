@@ -26,6 +26,7 @@
         <div class="form-group">
           <input type="text" name='mySession' class="form-control" ng-model="searchCtrl.sessionKey" placeholder="Enter session number">
         </div>
+        <button type="submit" ng-click="searchCtrl.setTab(2)" class="btn btn-default">Search</button>
       </form>
     </div>
     <div id="searchScreen" ng-show="searchCtrl.isActiveTab(2)">
@@ -40,7 +41,7 @@
   <div class="product-background">
     <div class="row-1">
       <div class="col-md-3">
-        <i class="fa fa-btc">0.00565</i>
+        <i class="fa fa-btc">price</i>
       </div>
       <div class="col-md-9">
         <p>Hartleys Best Raspberry Jam 340G</p>
