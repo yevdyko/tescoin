@@ -4,7 +4,7 @@ tescoinSearch.controller('TescoinSearchController', ['$http', function($http) {
 	var self = this;
 
 	    self.doSearch = function() {
-        $http.jsonp('https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&searchtext=butter&page=1&sessionkey=i2WVyUPLPfCQWgmlHzzqxaLaO5Oo1qIuHNHw4PPJbkqSfHc8aX&JSONP=JSON_CALLBACK')
+        $http.jsonp(self.createUrlString())
               .success(function(data){
                 console.log(data);
               });
@@ -16,7 +16,7 @@ tescoinSearch.controller('TescoinSearchController', ['$http', function($http) {
 
 	    self.createUrlString = function() {
 				// console.log("URL: https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&searchtext=".concat(self.searchTerm).concat("&page=1&sessionkey=").concat(self.sessionKey));
-        return "https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&searchtext=".concat(self.searchTerm).concat("&page=1&sessionkey=").concat(self.sessionKey).concat("&JSONP=myfunction");
+        return "https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&searchtext=".concat(self.searchTerm).concat("&page=1&sessionkey=").concat(self.sessionKey).concat("&JSONP=JSON_CALLBACK");
         // return "https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&searchtext=" + self.searchTerm + "&page=1&sessionkey=" + self.sessionKey;
       };
 }]);
