@@ -30,6 +30,10 @@
   margin-top: 60px;
 }
 
+.search-results {
+
+}
+
 .col-md-3  {
   height: 110px;
   width: 150px;
@@ -83,7 +87,19 @@ p {
   margin-top: 95px;
 }
 
-img {
+footer {
+  background-color: rgba(255,255,255, 1);
+  border-top: 1px dotted rgba(205,205,201, 1);
+  padding: 23px 30px 30px 45px;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+}
+
+/*img {
   width: auto;
   height: 250px;
-}
+}*/

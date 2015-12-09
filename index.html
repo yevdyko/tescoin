@@ -38,18 +38,37 @@
       </form>
     </div>
   </div>
-  <div class="product-background">
+
+  <div class="search-results" ng-show="searchCtrl.isActiveTab(2)">Number of products: {{ searchCtrl.searchedProducts.length }}</div>
+  <div class="product-background" ng-repeat="product in searchCtrl.searchedProducts">
     <div class="row-1">
       <div class="col-md-3">
-        <i class="fa fa-btc">price</i>
+        <i class="fa fa-btc">{{ product.price }}</i>
       </div>
       <div class="col-md-9">
-        <p>Hartleys Best Raspberry Jam 340G</p>
+        <p >{{ product.pName }}</p>
       </div>
     </div>
     <div class="image-box">
-      <img src="http://img.tesco.com/Groceries/pi/108/0000050354108/IDShot_540x540.jpg" alt="Picture">
+      <img src="{{ product.img }}" alt="Picture">
     </div>
   </div>
+  <footer>
+
+  <div>
+    <a href="http://ronin.makersacademy.com/"><img src="app/images/ronin-ma-logo.png"></a>
+  </div>
+    We built this page at <a href="http://ronin.makersacademy.com" target="_blank" class="ronin">Ronin Makers Academy</a>, a highly selective 12 week coding course in London.
+  </div>
+  <div>
+    This page uses <a href="https://www.angularjs.org/" target="_blank" class="ronin">Angular JS</a>, <a href="https://www.javascript.com/" target="_blank" class="ronin">Javascript</a>, <a href="http://www.w3.org/html/" target="_blank" class="ronin">HTML</a> and <a href="http://www.w3.org/Style/CSS/Overview.en.html" target="_blank" class="ronin">CSS</a>.
+  </div>
+  <div>
+    Built by <a href ="https://github.com/forty9er" target="_blank" class="ronin">Tom Barnes</a>, <a href ="https://github.com/youngmanr" target="_blank" class="ronin">Rob Youngman</a>, <a href ="https://github.com/d9nny" target="_blank" class="ronin">Dan Wheeler</a> and <a href ="https://github.com/yevdyko" target="_blank" class="ronin">Yev Dyko</a>.
+
+
+
+  </div>
+  </footer>
 </body>
 </html>
