@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Tescoin</title>
-  <link rel="stylesheet" type="text/css" href="app/fonts/newtext_bold.ttf">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="app/css/style.css">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -15,18 +14,18 @@
   <script src="app/js/controllers/tescoinSearchController.js"></script>
 </head>
 <body  ng-controller="TescoinSearchController as searchCtrl">
-  <div class="tesc-header">
+  <nav class="navbar navbar-default navbar-fixed-top">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">
         <p class="logo">TESCOIN</p>
       </a>
     </div>
     <div id="sessionScreen" ng-show="searchCtrl.isActiveTab(1)">
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" name='mySession' class="form-control" ng-model="searchCtrl.sessionKey" placeholder="Enter session number">
+      <form id='four' class="navbar-form navbar-left" role="search">
+        <div id='two' class="form-group">
+          <input id='three' type="text" name='mySession' class="form-control" ng-model="searchCtrl.sessionKey" placeholder="Enter session number">
         </div>
-        <button type="submit" ng-click="searchCtrl.setTab(2)" class="btn btn-default">Search</button>
+        <button id='one' type="submit" ng-click="searchCtrl.setTab(2)" class="btn btn-default">Enter</button>
       </form>
     </div>
     <div id="searchScreen" ng-show="searchCtrl.isActiveTab(2)">
@@ -37,19 +36,38 @@
         <button type="submit" ng-click="searchCtrl.doSearch()" class="btn btn-default">Search</button>
       </form>
     </div>
-  </div>
-  <div class="product-background">
-    <div class="row-1">
-      <div class="col-md-3">
-        <i class="fa fa-btc">price</i>
+  </nav>
+  <div ng-repeat="product in searchCtrl.searchedProducts">
+    <div class="product-background">
+      <div class="row-1">
+        <div class="col-md-3">
+          <i class="fa fa-btc fa-3x"></i>
+          <div class="item-price">{{ product.price }}</div>
+        </div>
+        <div class="col-md-9">
+          <p class="product-name">{{ product.pName }}</p>
+        </div>
       </div>
-      <div class="col-md-9">
-        <p>Hartleys Best Raspberry Jam 340G</p>
+      <div class="image-box">
+        <img class="img-small" ng-src="{{ product.img }}" alt="Picture">
       </div>
     </div>
-    <div class="image-box">
-      <img src="http://img.tesco.com/Groceries/pi/108/0000050354108/IDShot_540x540.jpg" alt="Picture">
+  </div>
+  <footer>
+  <div>
+    <div class="img-ronin">
+      <a href="http://ronin.makersacademy.com/"><img src="app/images/ronin-ma-logo.png"></a>
+    </div>
+    <div class="credits">
+      <p>
+      Built by <a href ="https://github.com/forty9er" target="_blank" class="ronin">Tom Barnes</a>, <a href ="https://github.com/youngmanr" target="_blank" class="ronin">Rob Youngman</a>, <a href ="https://github.com/d9nny" target="_blank" class="ronin">Dan Wheeler</a> and <a href ="https://github.com/yevdyko" target="_blank" class="ronin">Yev Dyko</a>.
+      <br>
+      We built this page during the Makerthon week at <a href="http://ronin.makersacademy.com" target="_blank" class="ronin">Ronin Makers Academy</a>.
+      <br>
+      This page uses <a href="https://www.angularjs.org/" target="_blank" class="ronin">Angular JS</a>, <a href="https://www.javascript.com/" target="_blank" class="ronin">Javascript</a>, <a href="http://www.w3.org/html/" target="_blank" class="ronin">HTML</a>, <a href="http://www.w3.org/Style/CSS/Overview.en.html" target="_blank" class="ronin">CSS</a>, <a href="http://www.tescolabs.com/" target="_blank" class="ronin">Tesco Labs API</a> and <a href="http://www.bittylicious.com/" target="_blank" class="ronin">Bittylicious API</a>.
+      </p>
     </div>
   </div>
+  </footer>
 </body>
 </html>

@@ -13,11 +13,18 @@ describe('TescoinSearchController', function() {
     expect(ctrl.sessionKey).toBeUndefined();
   });
 
-  describe('#createUrlString', function() {
-    var searchTerm = 'products';
-    var sessionKey = 123456789 ;
-    ctrl.createUrlString(searchTerm, sessionKey);
-    // expect(ctrl.createUrlString(searchTerm, sessionKey)).toEqual('https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&searchtext=products&page=1&sessionkey=123456789')
+  describe('setTab', function() {
+    it('sets the active tab to the input number', function() {
+      ctrl.setTab(2);
+      expect(ctrl.activeTab).toEqual(2);
+    });
+  });
+
+
+  describe('isActiveTab', function() {
+    it('checks what activeTab is', function() {
+      expect(ctrl.isActiveTab(1)).toBeTruthy();
+    });
   });
 
   describe('when searching for a product', function() {
@@ -25,7 +32,6 @@ describe('TescoinSearchController', function() {
       httpBackend.verifyNoOutstandingExpectation();
       httpBackend.verifyNoOutstandingRequest();
      });
-
 
     var httpBackend;
     beforeEach(inject(function($httpBackend) {

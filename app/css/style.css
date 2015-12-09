@@ -1,9 +1,50 @@
-.tesc-header {
+nav {
   padding-left: 45px;
   padding-top: 12.5px;
   height: 75px;
   background-color: #FFF;
   vertical-align: middle;
+  position: fixed;
+  top: 0px;
+}
+
+#sessionScreen {
+  height: 300px;
+  width: 55%;
+  background-color: blue;
+  margin: auto;
+  margin-top: 150px;
+  border-radius: 25px;
+  position: relative;
+  -webkit-box-shadow: 10px 0px 32px -9px rgba(0,0,0,0.52);
+  -moz-box-shadow: 10px 0px 32px -9px rgba(0,0,0,0.52);
+  box-shadow: 10px 0px 32px -9px rgba(0,0,0,0.52);
+}
+
+#one {
+  height: 50px;
+  width: 120px;
+  font-size: 18px;
+  color: #999999;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-left: 8px;
+}
+
+#two {
+  height: 100px;
+  margin-bottom: -50px;
+}
+
+#three {
+  width: 400px;
+  height: 50px;
+  font-size: 20px;
+}
+
+#four {
+  margin-top: 120px;
+  margin-left: 51px;
 }
 
 .logo {
@@ -51,13 +92,22 @@
 
 i {
   font-family: "Roboto", sans-serif;
-  font-size: 30px;
+  font-size: 50px;
   font-weight: bold;
   vertical-align: middle;
   font-style: normal;
 }
 
-p {
+.item-price {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  vertical-align: middle;
+  font-style: normal;
+  margin-left: 5px;
+}
+
+.product-name {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: bold;
@@ -70,8 +120,8 @@ p {
   height: 140px;
   background-color: yellow;
   position: absolute;
-  margin-left: 750px;
-  margin-top: 245px;
+  margin-left: 620px;
+  margin-top: 360px;
 }
 
 .image-box {
@@ -79,11 +129,40 @@ p {
   height: 250px;
   background-color: red;
   position: absolute;
-  margin-left: 510px;
-  margin-top: 95px;
+  margin-left: 330px;
+  margin-top: 140px;
+  border-radius: 25px;
 }
 
-img {
+.credits {
+  position: absolute;
+  bottom: 10px;
+  text-align: right;
+  right: 50px;
+}
+
+footer {
+  background-color: rgba(255,255,255, 1);
+  border-top: 1px dotted rgba(205,205,201, 1);
+  padding: 23px 10px 35px 45px;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+}
+
+.img-ronin {
   width: auto;
-  height: 250px;
+  height: 50px;
+}
+
+.img-small {
+  border-radius: 25px;
+  width: auto;
+  height: 300px;
+   -webkit-box-shadow: 10px 0px 32px -9px rgba(0,0,0,0.52);
+  -moz-box-shadow: 10px 0px 32px -9px rgba(0,0,0,0.52);
+  box-shadow: 10px 0px 32px -9px rgba(0,0,0,0.52);
 }
