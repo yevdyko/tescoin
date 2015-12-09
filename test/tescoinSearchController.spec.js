@@ -27,19 +27,11 @@ describe('TescoinSearchController', function() {
     });
   });
 
-  describe('#createUrlString', function() {
-    var searchTerm = 'products';
-    var sessionKey = 123456789 ;
-    ctrl.createUrlString(searchTerm, sessionKey);
-    // expect(ctrl.createUrlString(searchTerm, sessionKey)).toEqual('https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&searchtext=products&page=1&sessionkey=123456789')
-  });
-
   describe('when searching for a product', function() {
     afterEach(function() {
       httpBackend.verifyNoOutstandingExpectation();
       httpBackend.verifyNoOutstandingRequest();
      });
-
 
     var httpBackend;
     beforeEach(inject(function($httpBackend) {

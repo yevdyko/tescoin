@@ -6,7 +6,6 @@ tescoinSearch.controller('TescoinSearchController', ['$http', '$resource', funct
   self.searchedProducts = [];
   self.searchResource = $resource('https://bittylicious.com/api/v1/quote/BTC/GB/GBP/BANK/1/BUY');
 
-
       self.isActiveTab = function(num) {
         return (self.activeTab === num);
       };
@@ -27,7 +26,7 @@ tescoinSearch.controller('TescoinSearchController', ['$http', '$resource', funct
       };
 
       self.convertPrice = function(poundPr) {
-        return (poundPr / self.bitcoinRate).toFixed(5); 
+        return (poundPr / self.bitcoinRate).toFixed(5);
       };
 
       self.convertImage = function(imgString) {
@@ -64,15 +63,6 @@ tescoinSearch.controller('TescoinSearchController', ['$http', '$resource', funct
       };
 
 	    self.createUrlString = function() {
-        self.sessionKey = "r3skDV33vRgx5YqIFtVN1fw1LOqZMeI1vBl325BrpjepZIOX1q";
-				// console.log("URL: https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&searchtext=".concat(self.searchTerm).concat("&page=1&sessionkey=").concat(self.sessionKey));
-        return "https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&searchtext=".concat(self.searchTerm).concat("&page=1&sessionkey=").concat(self.sessionKey).concat("&JSONP=JSON_CALLBACK");
-        // return "https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&searchtext=" + self.searchTerm + "&page=1&sessionkey=" + self.sessionKey;
+				return "https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&searchtext=".concat(self.searchTerm).concat("&page=1&sessionkey=").concat(self.sessionKey).concat("&JSONP=JSON_CALLBACK");
       };
 }]);
-
-
-// https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=LOGIN&email=ruralmyth@gmail.com&password=m00m1NS??&developerkey=MYrigdksfRpGy2DdaXQe&applicationkey=67F37A4AB79CF4D72BBB
-
-// https://secure.techfortesco.com/tescolabsapi/restservice.aspx?command=PRODUCTSEARCH&searchtext=myproduct&page=1&sessionkey=
-

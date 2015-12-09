@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Tescoin</title>
-  <link rel="stylesheet" type="text/css" href="app/fonts/newtext_bold.ttf">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="app/css/style.css">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -15,7 +14,7 @@
   <script src="app/js/controllers/tescoinSearchController.js"></script>
 </head>
 <body  ng-controller="TescoinSearchController as searchCtrl">
-  <div class="tesc-header">
+  <nav class="navbar navbar-default navbar-fixed-top">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">
         <p class="logo">TESCOIN</p>
@@ -37,37 +36,35 @@
         <button type="submit" ng-click="searchCtrl.doSearch()" class="btn btn-default">Search</button>
       </form>
     </div>
-  </div>
-
-  <div class="search-results" ng-show="searchCtrl.isActiveTab(2)">Number of products: {{ searchCtrl.searchedProducts.length }}</div>
-
+  </nav>
   <div ng-repeat="product in searchCtrl.searchedProducts">
     <div class="product-background">
       <div class="row-1">
         <div class="col-md-3">
-          <i class="fa fa-btc">{{ product.price }}</i>
+          <i class="fa fa-btc fa-3x"></i>
+          <div class="item-price">{{ product.price }}</div>
         </div>
         <div class="col-md-9">
           <p class="product-name">{{ product.pName }}</p>
         </div>
       </div>
       <div class="image-box">
-        <img class="img-small" src="{{ product.img }}" alt="Picture">
+        <img class="img-small" ng-src="{{ product.img }}" alt="Picture">
       </div>
     </div>
   </div>
   <footer>
   <div>
-    <div>
+    <div class="img-ronin">
       <a href="http://ronin.makersacademy.com/"><img src="app/images/ronin-ma-logo.png"></a>
     </div>
     <div class="credits">
       <p>
-      We built this page at <a href="http://ronin.makersacademy.com" target="_blank" class="ronin">Ronin Makers Academy</a>, a highly selective 12 week coding course in London.
-      <br>
       Built by <a href ="https://github.com/forty9er" target="_blank" class="ronin">Tom Barnes</a>, <a href ="https://github.com/youngmanr" target="_blank" class="ronin">Rob Youngman</a>, <a href ="https://github.com/d9nny" target="_blank" class="ronin">Dan Wheeler</a> and <a href ="https://github.com/yevdyko" target="_blank" class="ronin">Yev Dyko</a>.
       <br>
-      This page uses <a href="https://www.angularjs.org/" target="_blank" class="ronin">Angular JS</a>, <a href="https://www.javascript.com/" target="_blank" class="ronin">Javascript</a>, <a href="http://www.w3.org/html/" target="_blank" class="ronin">HTML</a> and <a href="http://www.w3.org/Style/CSS/Overview.en.html" target="_blank" class="ronin">CSS</a>.
+      We built this page during the Makerthon week at <a href="http://ronin.makersacademy.com" target="_blank" class="ronin">Ronin Makers Academy</a>.
+      <br>
+      This page uses <a href="https://www.angularjs.org/" target="_blank" class="ronin">Angular JS</a>, <a href="https://www.javascript.com/" target="_blank" class="ronin">Javascript</a>, <a href="http://www.w3.org/html/" target="_blank" class="ronin">HTML</a>, <a href="http://www.w3.org/Style/CSS/Overview.en.html" target="_blank" class="ronin">CSS</a>, <a href="http://www.tescolabs.com/" target="_blank" class="ronin">Tesco Labs API</a> and <a href="http://www.bittylicious.com/" target="_blank" class="ronin">Bittylicious API</a>.
       </p>
     </div>
   </div>
