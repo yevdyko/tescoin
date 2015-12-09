@@ -1,7 +1,7 @@
 Objective of the Tescoin project
 ================================
 
-To develop a website which enable users to search the Tesco on-line shopping catalog and display the searched items priced in bitcoins using the real time exchange rate obtained from the bittylicious bitcoin exchange. 
+To develop a website which enable users to search the Tesco on-line shopping catalog and display the searched items priced in bitcoins using the real time exchange rate obtained from the Bittylicious Bitcoin exchange. 
 
 User Stories
 ============
@@ -13,30 +13,32 @@ Link to user stories
 
 Deployment on local browser
 =====================================================
-* git clone https://github.com/youngmanr/tescoin tescoin
-* git pull origin master
-* bower install
-* npm install
-* open index.html
 
-Deploying to heroku
+* Install Node/NPM (https://nodejs.org/en/download/)
+```git clone https://github.com/forty9er/tescoin tescoin```
+```git pull origin master```
+```npm install```
+```bower install```
+```open index.html``` (or ```node tescoin.js``` to start on Express server)
+
+Deploying to Heroku
 ===================
 
-* heroku create tescoin
-* git push heroku master
-* heroku open
+```heroku create <your app name>```
+```git push heroku master```
+```heroku open```
 
-Instruction for using tescoin website
+Instruction for using Tescoin website
 =====================================
 
-* Tescolabs online store api requires users to 
+* Tesco Labs online store API requires users to: 
   * have registered as a developer and registered their app
-  * have a tesco grocery account
-* Link to developer registration is 
-*   https://secure.techfortesco.com/tescoapiweb/login.aspx
-* Details of how to use the tescolabs api are given here
+  * have a Tesco grocery account
+* Link to developer registration is: 
+  * https://secure.techfortesco.com/tescoapiweb/login.aspx
+* Details of how to use the Tesco Labs API are given here:
   * https://secure.techfortesco.com/tescoapiweb/wiki/intro.html
-* The tesco api requires the user to obtain a tesco api session key obtained from
+* The Tesco API requires the user to obtain a Tesco API session key. You need to login to the Tesco Labs website before you can use Tescoin. Follow the example on the Tesco login WIKI:
   * https://secure.techfortesco.com/tescoapiweb/wiki/login.html
 
 Screen shots
@@ -44,4 +46,3 @@ Screen shots
 ![User Stories](docs/photos/2_beer.png)
 ![User Stories](docs/photos/3_sprouts.png)
 ![User Stories](docs/photos/4_wine.png)
-
