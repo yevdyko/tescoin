@@ -22,11 +22,11 @@
       </a>
     </div>
     <div id="sessionScreen" ng-show="searchCtrl.isActiveTab(1)">
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" name='mySession' class="form-control" ng-model="searchCtrl.sessionKey" placeholder="Enter session number">
+      <form id='four' class="navbar-form navbar-left" role="search">
+        <div id='two' class="form-group">
+          <input id='three' type="text" name='mySession' class="form-control" ng-model="searchCtrl.sessionKey" placeholder="Enter session number">
         </div>
-        <button type="submit" ng-click="searchCtrl.setTab(2)" class="btn btn-default">Search</button>
+        <button id='one' type="submit" ng-click="searchCtrl.setTab(2)" class="btn btn-default">Enter</button>
       </form>
     </div>
     <div id="searchScreen" ng-show="searchCtrl.isActiveTab(2)">
@@ -41,17 +41,19 @@
 
   <div class="search-results" ng-show="searchCtrl.isActiveTab(2)">Number of products: {{ searchCtrl.searchedProducts.length }}</div>
 
-  <div class="product-background" ng-repeat="product in searchCtrl.searchedProducts">
-    <div class="row-1">
-      <div class="col-md-3">
-        <i class="fa fa-btc">{{ product.price }}</i>
+  <div ng-repeat="product in searchCtrl.searchedProducts">
+    <div class="product-background">
+      <div class="row-1">
+        <div class="col-md-3">
+          <i class="fa fa-btc">{{ product.price }}</i>
+        </div>
+        <div class="col-md-9">
+          <p class="product-name">{{ product.pName }}</p>
+        </div>
       </div>
-      <div class="col-md-9">
-        <p class="product-name">{{ product.pName }}</p>
+      <div class="image-box">
+        <img class="img-small" src="{{ product.img }}" alt="Picture">
       </div>
-    </div>
-    <div class="image-box">
-      <img class="img-small" src="{{ product.img }}" alt="Picture">
     </div>
   </div>
   <footer>
