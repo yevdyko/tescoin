@@ -6,7 +6,7 @@ To develop a website which enable users to search the Tesco on-line shopping cat
 User Stories
 ============
 
-![User Stories](docs/photo/user_stories.png)
+![User Stories](docs/photos/1_user_stories)
 
 Link to user stories
 * https://docs.google.com/spreadsheets/d/1Q6hG9aBY7lSwlUnbUx1afprLKVxiOUhd8JSAa1beGms/edit#gid=0&vpid=A1
