@@ -20,8 +20,6 @@ Deployment locally
 
 ``` npm install ``` from within the project root directory
 
-``` bower install ```
-
 ``` open index.html ``` 
 (or ``` node tescoin.js ``` to start on Express server and visit localhost:5000 in your browser)
 
