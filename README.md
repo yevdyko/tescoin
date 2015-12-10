@@ -43,5 +43,6 @@ Screen shots
 ============
 ![User Stories](docs/photos/2_beer.png)
 ![User Stories](docs/photos/3_sprouts.png)
+![User Stories](docs/photos/5_dyson.png)
 ![User Stories](docs/photos/4_wine.png)
 
