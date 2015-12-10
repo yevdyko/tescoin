@@ -1,7 +1,7 @@
 Objective of the Tescoin project
 ================================
 
-To develop a website which enable users to search the Tesco on-line shopping catalog and display the results priced in bitcoins using the real time exchange rate obtained from the Bittylicious Bitcoin exchange. 
+To develop a website which enable users to search the Tesco on-line grocery catalog and display the results priced in bitcoins using the real time exchange rate obtained from the Bittylicious Bitcoin exchange. 
 
 User Stories
 ============
@@ -38,7 +38,7 @@ Deploying to Heroku
 Instruction for using Tescoin website
 =====================================
 
-* Tesco Labs online store API requires users to: 
+* Tesco Labs online grocery store API requires users to: 
   * have registered as a developer and registered their app
   * have a Tesco grocery account
 * Link to developer registration is: 
