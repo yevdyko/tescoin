@@ -1,10 +1,10 @@
-describe('TescoinSearchController', function() {
-  beforeEach(module('TescoinSearch'));
+describe('SearchController', function() {
+  beforeEach(module('app'));
 
   var ctrl;
 
   beforeEach(inject(function($controller) {
-    ctrl = $controller('TescoinSearchController');
+    ctrl = $controller('SearchController');
   }));
 
   it( 'initialises with an empty search result, session key and search term', function() {
